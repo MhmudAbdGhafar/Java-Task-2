@@ -17,36 +17,20 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void print(){
-        writeToFile();
-        readFromFile();
+    public String getName(){
+        return name;
     }
-    private void writeToFile(){
-        try {
-            FileWriter myWriter = new FileWriter("filename.txt");
 
-            myWriter.write("Id: "+String.valueOf(id) + ", ");
-            myWriter.write("Name: "+name + ", ");
-            myWriter.write("Salary: "+String.valueOf(salary));
-
-            myWriter.close();
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+    public double getSalary(){
+        return salary;
     }
-    private void readFromFile(){
-        try {
-            File myObj = new File("filename.txt");
-            Scanner myReader = new Scanner(myObj);
-
-            String data = myReader.nextLine();
-            System.out.println(data);
-
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+    public void setSalary(double salary){
+        this.salary = salary;
+    }
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id = id;
     }
 }
