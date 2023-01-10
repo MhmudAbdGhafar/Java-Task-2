@@ -11,7 +11,7 @@ public class Employee {
     private double salary;
     private int id;
 
-    Employee(int id, String name, double salary){
+    public Employee(int id, String name, double salary){
         this.id = id;
         this.name = name;
         this.salary = salary;
